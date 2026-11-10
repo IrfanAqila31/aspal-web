@@ -3,5 +3,6 @@
 @theme{
     --color-text:oklch(37.2% 0.044 257.287);
     --color-header:oklch(27.9% 0.041 260.031);
-    --color-button:oklch(20.8% 0.042 265.755)
+    --color-button:oklch(20.8% 0.042 265.755);
+    --font-sans: 'Plus Jakarta Sans', sans-serif;
 }
