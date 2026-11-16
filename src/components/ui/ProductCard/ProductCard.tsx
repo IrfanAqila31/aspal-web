@@ -1,17 +1,17 @@
-interface ProductCardProps {
-  name: string;
-  description: string;
-}
+import type { Product } from "../../../data/dataProducts";
+type ProductCardProps = Pick<Product, "name" | "image">;
 
-const ProductCard = ({ name, description }: ProductCardProps) => {
+
+const ProductCard = ({ name, image }: ProductCardProps) => {
   return (
     <div className="relative flex flex-col rounded-xl bg-white text-text shadow-md">
-      <div className="relative mx-4 -mt-6 h-40 overflow-hidden rounded-xl bg-linear-to-r from-blue-500 to-blue-600 shadow-lg"></div>
-
+      <div className="relative mx-4 -mt-6 h-40 overflow-hidden rounded-xl shadow-lg">
+        <img src={image} alt={name} className="h-full w-full object-cover" loading="lazy"/>
+      </div>
       <div className="p-6">
         <h3 className="mb-2 text-xl font-semibold text-header">{name}</h3>
 
-        <p className="text-base text-text">{description}</p>
+        {/* <p className="text-base text-text">{description}</p> */}
       </div>
 
       <div className="p-6 pt-0">

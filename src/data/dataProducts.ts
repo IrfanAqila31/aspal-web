@@ -1,3 +1,8 @@
+import LigninFiber from '../assets/images/products/lignin-fiber.webp'
+import AntiRuttingAgent from '../assets/images/products/anti-rutting-agent.webp'
+import WarmMixAgent from '../assets/images/products/warm-mix-agent.webp'
+
+
 export interface Product {
   id: string;
   name: string;
@@ -8,6 +13,7 @@ export interface Product {
   packing: string;
   badge: string;
   color: string;
+  image?: string;
 }
 
 export const products: Product[] = [
@@ -22,6 +28,7 @@ export const products: Product[] = [
     packing: "Karung 20 kg",
     badge: "Natural Fiber",
     color: "bg-green-100 text-green-800",
+    image: LigninFiber,
   },
   {
     id: "anti-rutting-agent",
@@ -34,6 +41,7 @@ export const products: Product[] = [
     packing: "Karung 25 kg",
     badge: "HDPE Pellet",
     color: "bg-blue-100 text-blue-800",
+    image: AntiRuttingAgent,
   },
   {
     id: "warm-mix-agent",
@@ -46,6 +54,7 @@ export const products: Product[] = [
     packing: "Drum 200 kg / Karung 25 kg",
     badge: "Energy Saving",
     color: "bg-orange-100 text-orange-800",
+    image: WarmMixAgent,
   },
   {
     id: "anti-stripping-agent",

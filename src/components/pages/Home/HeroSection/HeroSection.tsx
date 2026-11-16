@@ -3,7 +3,7 @@ import heroImage from "../../../../assets/images/home/bg-hero.webp";
 
 const Home = () => {
   return (
-    <section className="pt-15 relative w-full h-180 md:h-170 lg:h-160 flex items-center bg-cover bg-center bg-no-repeat">
+    <section className="pt-15 relative w-full h-180 md:h-170 lg:h-screen flex items-center bg-cover bg-center bg-no-repeat">
       <img
         src={heroImage}
         alt="Aspal"
@@ -34,7 +34,7 @@ const Home = () => {
             className="flex flex-wrap items-center gap-4"
           >
             <NavLink
-              to="contact-us"
+              to="contact"
               className="group flex gap-3 items-center justify-center px-8 py-3 bg-slate-100 hover:bg-slate-600 text-slate-900 font-medium hover:text-slate-50 cursor-pointer rounded-full transition duration-300"
             >
               Hubungi Kami
