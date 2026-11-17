@@ -8,7 +8,7 @@ const navLinks = [
   { label: "Tentang Kami", to: "/about" },
   { label: "Produk", to: "/products" },
   { label: "Aplikasi", to: "/applications" },
-  { label: "Kontak Kami", to: "/contact" },
+  { label: "Kontak", to: "/contact" },
 ];
 
 const Navbar = () => {

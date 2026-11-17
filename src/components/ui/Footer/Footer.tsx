@@ -21,9 +21,9 @@ const Footer = () => {
             </Link>
 
             <p className="text-slate-400 font-normal leading-relaxed mb-8 max-w-sm text-sm">
-              Produsen dan distributor aditif aspal berkualitas tinggi untuk
-              infrastruktur jalan, bandara, dan pelabuhan di Indonesia. Sesuai
-              Spesifikasi PUPR 2023.
+              Hubei Luxiang Chemical Technology Co., Ltd. merupakan produsen
+              yang bergerak di bidang aditif aspal serta material konstruksi dan
+              pemeliharaan jalan dan jembatan. Berdiri sejak 2015.
             </p>
 
             {/* Social Media */}
@@ -62,11 +62,11 @@ const Footer = () => {
             </h3>
             <ul className="space-y-4">
               {[
-                { label: "Home", to: "/" },
-                { label: "About Us", to: "/about" },
-                { label: "Products", to: "/products" },
-                { label: "Applications", to: "/applications" },
-                { label: "Contact Us", to: "/contact" },
+                { label: "Beranda", to: "/" },
+                { label: "Tentang Kami", to: "/about" },
+                { label: "Produk", to: "/products" },
+                { label: "Applikasi", to: "/applications" },
+                { label: "Kontak", to: "/contact" },
               ].map((link) => (
                 <li key={link.to}>
                   <Link

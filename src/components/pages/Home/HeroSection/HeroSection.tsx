@@ -1,11 +1,11 @@
 import { NavLink } from "react-router-dom";
-import heroImage from "../../../../assets/images/home/bg-hero.webp";
+import HeroImage from "../../../../assets/images/home/bg-hero.webp";
 
 const Home = () => {
   return (
     <section className="pt-15 relative w-full h-180 md:h-170 lg:h-screen flex items-center bg-cover bg-center bg-no-repeat">
       <img
-        src={heroImage}
+        src={HeroImage}
         alt="Aspal"
         className="absolute inset-0 w-full h-full object-cover object-[65%_center] md:object-center -z-10"
       />
