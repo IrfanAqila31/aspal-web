@@ -1,7 +1,15 @@
-import LigninFiber from '../assets/images/products/lignin-fiber.webp'
-import AntiRuttingAgent from '../assets/images/products/anti-rutting-agent.webp'
-import WarmMixAgent from '../assets/images/products/warm-mix-agent.webp'
-
+import LigninFiber from "../assets/images/products/lignin-fiber.webp";
+import AntiRuttingAgent from "../assets/images/products/anti-rutting-agent.webp";
+import WarmMixAgent from "../assets/images/products/warm-mix-agent.webp";
+import AntiStrippingAgent from "../assets/images/products/anti-stripping-agent.webp";
+import HighViscosityAgent from "../assets/images/products/high-viscosity-agent.webp";
+import PolyacrylonitrileFibre from "../assets/images/products/polyacrylonitrile-fibre.webp";
+import PolyesterFibre from "../assets/images/products/polyester-fibre.webp";
+import BasaltFibre from "../assets/images/products/basalt-fibre.webp";
+import AsphaltRejuvenator from "../assets/images/products/asphalt-rejuvenator.webp";
+import EnergyStorageLuminescentPaint from "../assets/images/products/energy-storage-luminescent-paint.webp";
+import AntiFreezingAgent from "../assets/images/products/anti-freezing-agent.webp";
+import CompositeFlameRetardant from "../assets/images/products/composite-flame-retardant-smoke-suppressant.webp";
 
 export interface Product {
   id: string;
@@ -12,7 +20,6 @@ export interface Product {
   dosage: string;
   packing: string;
   badge: string;
-  color: string;
   image?: string;
 }
 
@@ -23,11 +30,10 @@ export const products: Product[] = [
     type: "Fiber",
     tagline: "Serat alami penguat campuran aspal",
     description:
-      "Mencegah segregasi aspal, meningkatkan stabilitas Marshall, dan mengurangi retak. Cocok untuk campuran SMA & Porous Asphalt.",
+      "Meningkatkan stabilitas dan ketahanan terhadap retak pada campuran aspal.",
     dosage: "0.3% dari berat campuran aspal",
     packing: "Karung 20 kg",
     badge: "Natural Fiber",
-    color: "bg-green-100 text-green-800",
     image: LigninFiber,
   },
   {
@@ -36,11 +42,10 @@ export const products: Product[] = [
     type: "Pellet",
     tagline: "Mencegah alur roda akibat beban berat",
     description:
-      "HDPE Polymer Pellet yang meningkatkan ketahanan deformasi permanen. Terbukti menurunkan kedalaman alur hingga 82% pada Wheel Tracking Test.",
+      "Meningkatkan ketahanan campuran aspal terhadap deformasi permanen akibat beban berat.",
     dosage: "3–5% dari berat aspal",
     packing: "Karung 25 kg",
     badge: "HDPE Pellet",
-    color: "bg-blue-100 text-blue-800",
     image: AntiRuttingAgent,
   },
   {
@@ -49,11 +54,10 @@ export const products: Product[] = [
     type: "Additive",
     tagline: "Hemat energi produksi 30–40°C",
     description:
-      "Menurunkan viskositas aspal sehingga pencampuran bisa dilakukan pada suhu lebih rendah, menghemat bahan bakar dan emisi karbon.",
+      "Mengurangi suhu pencampuran dan pemadatan aspal sehingga dapat menghemat energi.",
     dosage: "0.3–0.5% dari berat aspal",
     packing: "Drum 200 kg / Karung 25 kg",
     badge: "Energy Saving",
-    color: "bg-orange-100 text-orange-800",
     image: WarmMixAgent,
   },
   {
@@ -62,11 +66,11 @@ export const products: Product[] = [
     type: "Liquid",
     tagline: "Mencegah pelepasan lapisan akibat air",
     description:
-      "LX-6525 Liquid yang memperkuat ikatan antara agregat dan aspal, mencegah stripping akibat air & kelembaban tinggi.",
+      "Memperkuat daya lekat antara agregat dan aspal untuk mencegah kerusakan akibat kelembapan.",
     dosage: "0.3–0.5% dari berat aspal",
     packing: "Drum 200 kg / Jeriken 25 kg",
     badge: "Liquid",
-    color: "bg-cyan-100 text-cyan-800",
+    image: AntiStrippingAgent,
   },
   {
     id: "high-viscosity-agent",
@@ -74,11 +78,11 @@ export const products: Product[] = [
     type: "Additive",
     tagline: "Pengental aspal performa tinggi",
     description:
-      "Meningkatkan viskositas dan titik lembek aspal untuk aplikasi di daerah bersuhu tinggi dan beban lalu lintas berat.",
+      "Meningkatkan viskositas bahan pengikat aspal untuk menghasilkan perkerasan yang tahan lama dan berkinerja tinggi.",
     dosage: "3–5% dari berat aspal",
     packing: "Karung 25 kg",
     badge: "High Performance",
-    color: "bg-purple-100 text-purple-800",
+    image: HighViscosityAgent,
   },
   {
     id: "polyacrylonitrile-fibre",
@@ -86,11 +90,11 @@ export const products: Product[] = [
     type: "Fiber",
     tagline: "Serat PAN penguat tarik & retak",
     description:
-      "Serat sintetis PAN yang mendistribusikan tegangan tarik secara merata, mencegah micro-cracking pada perkerasan aspal.",
+      "Meningkatkan kekuatan tarik dan membantu mengendalikan retak pada lapisan aspal.",
     dosage: "0.9–1.8 kg per ton campuran",
     packing: "Karung 20 kg",
     badge: "Synthetic Fiber",
-    color: "bg-green-100 text-green-800",
+    image: PolyacrylonitrileFibre,
   },
   {
     id: "polyester-fibre",
@@ -98,11 +102,11 @@ export const products: Product[] = [
     type: "Fiber",
     tagline: "Serat poliester tahan lelah & retak",
     description:
-      "Meningkatkan ketahanan fatigue dan fleksibilitas campuran aspal, cocok untuk jalan dengan beban berulang tinggi.",
+      "Meningkatkan daya tahan dan ketahanan terhadap kelelahan material untuk menghasilkan jalan yang lebih tahan lama.",
     dosage: "0.9–1.8 kg per ton campuran",
     packing: "Karung 20 kg",
     badge: "Fatigue Resistant",
-    color: "bg-teal-100 text-teal-800",
+    image: PolyesterFibre,
   },
   {
     id: "basalt-fibre",
@@ -110,11 +114,11 @@ export const products: Product[] = [
     type: "Fiber",
     tagline: "Serat basalt alami tahan panas tinggi",
     description:
-      "Dibuat dari batu basalt vulkanik, tahan suhu hingga 700°C. Ideal untuk perkerasan bandara dan pelabuhan.",
+      "Serat alami berkekuatan tinggi untuk penguatan material dan stabilitas termal.",
     dosage: "0.9–1.8 kg per ton campuran",
     packing: "Karung 20 kg",
     badge: "Heat Resistant",
-    color: "bg-red-100 text-red-800",
+    image: BasaltFibre,
   },
   {
     id: "asphalt-rejuvenator",
@@ -122,11 +126,11 @@ export const products: Product[] = [
     type: "Liquid",
     tagline: "Peremaja aspal daur ulang (RAP)",
     description:
-      "Memulihkan sifat reologi aspal tua dalam campuran RAP (Reclaimed Asphalt Pavement), mengurangi kebutuhan aspal baru hingga 30%.",
+      "Mengembalikan karakteristik aspal yang telah mengalami penuaan untuk memperpanjang umur layanan perkerasan.",
     dosage: "1.5–3% dari berat RAP",
     packing: "Drum 200 kg",
     badge: "Eco RAP",
-    color: "bg-lime-100 text-lime-800",
+    image: AsphaltRejuvenator,
   },
   {
     id: "luminescent-paint",
@@ -134,11 +138,11 @@ export const products: Product[] = [
     type: "Paint",
     tagline: "Cat marka bercahaya di malam hari",
     description:
-      "Menyerap energi cahaya siang hari dan memancarkannya di malam hari. Meningkatkan keselamatan marka jalan tanpa listrik.",
+      "Cat fotoluminesen yang menyerap dan menyimpan energi cahaya untuk meningkatkan visibilitas pada malam hari.",
     dosage: "Sesuai spesifikasi aplikasi",
     packing: "Ember 20 kg / 25 kg",
     badge: "Road Safety",
-    color: "bg-yellow-100 text-yellow-800",
+    image: EnergyStorageLuminescentPaint,
   },
   {
     id: "anti-freezing-agent",
@@ -146,11 +150,11 @@ export const products: Product[] = [
     type: "Additive",
     tagline: "Aditif anti-beku cuaca dingin",
     description:
-      "Mencegah pembekuan dan keretakan perkerasan aspal di lingkungan bersuhu rendah, menjaga fleksibilitas campuran.",
+      "Mencegah pembentukan es dan meningkatkan kinerja material pada suhu rendah.",
     dosage: "0.3–0.5% dari berat aspal",
     packing: "Karung 25 kg",
     badge: "Cold Climate",
-    color: "bg-sky-100 text-sky-800",
+    image: AntiFreezingAgent,
   },
   {
     id: "flame-retardant",
@@ -158,10 +162,10 @@ export const products: Product[] = [
     type: "Additive",
     tagline: "Penahan api & asap untuk terowongan",
     description:
-      "Campuran aditif penghambat api dan penekan asap untuk perkerasan di area terowongan dan infrastruktur tertutup.",
+      "Mengurangi sifat mudah terbakar dan pembentukan asap untuk menghasilkan material jalan yang lebih aman.",
     dosage: "5–8% dari berat campuran",
     packing: "Karung 25 kg",
     badge: "Fire Safe",
-    color: "bg-rose-100 text-rose-800",
+    image: CompositeFlameRetardant,
   },
 ];

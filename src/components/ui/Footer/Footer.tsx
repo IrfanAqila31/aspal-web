@@ -63,7 +63,7 @@ const Footer = () => {
             <ul className="space-y-4">
               {[
                 { label: "Beranda", to: "/" },
-                { label: "Tentang Kami", to: "/about" },
+                { label: "Tentang Kami", to: "/about-us" },
                 { label: "Produk", to: "/products" },
                 { label: "Applikasi", to: "/applications" },
                 { label: "Kontak", to: "/contact" },

@@ -1,8 +1,14 @@
+import ProductsHeroSection from "./ProductsHero";
+import ProductCatalogSection from "./ProductsCatalog";
+import CtaBanner from "../../ui/CtaBanner";
+
 const Products = () => {
   return (
-    <div>
-      <h1>Products</h1>
-    </div>
+    <section>
+      <ProductsHeroSection />
+      <ProductCatalogSection />
+      <CtaBanner />
+    </section>
   );
 };
 export default Products;

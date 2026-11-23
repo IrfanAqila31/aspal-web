@@ -26,7 +26,7 @@ const ProductSection = () => {
             <ProductCard
               key={product.id}
               name={product.name}
-              // description={product.description}
+              description={product.description}
               image={product.image}
             />
           ))}

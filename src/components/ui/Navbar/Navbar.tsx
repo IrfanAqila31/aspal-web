@@ -5,7 +5,7 @@ import { Menu, X } from "lucide-react";
 // Daftar menu navbar — cukup definisikan di satu tempat
 const navLinks = [
   { label: "Beranda", to: "/" },
-  { label: "Tentang Kami", to: "/about" },
+  { label: "Tentang Kami", to: "/about-us" },
   { label: "Produk", to: "/products" },
   { label: "Aplikasi", to: "/applications" },
   { label: "Kontak", to: "/contact" },
