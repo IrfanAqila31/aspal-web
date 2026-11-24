@@ -1,24 +1,24 @@
 import { sectors } from "../../../../data/dataSectors";
+import { useTranslation } from "../../../../data/translation";
 
-const Applications = () => {
+const ApplicationsSection = () => {
+  const { t } = useTranslation();
+
   return (
     <section className="bg-slate-50 py-20">
       <div className="mx-auto max-w-7xl px-4">
-
         {/* Section Header */}
         <div className="mb-12 text-center">
           <span className="mb-3 block text-sm font-bold uppercase tracking-wider text-blue-600">
-            Sektor Aplikasi
+            {t.home.applications.eyebrow}
           </span>
 
           <h2 className="mb-4 text-3xl font-bold text-header md:text-5xl">
-            Solusi untuk Berbagai Kebutuhan Infrastruktur
+            {t.home.applications.title}
           </h2>
 
           <p className="mx-auto max-w-3xl text-base leading-relaxed text-text">
-            Produk kami dirancang untuk mendukung berbagai kebutuhan
-            konstruksi dan pemeliharaan infrastruktur jalan dengan
-            kondisi serta karakteristik yang berbeda.
+            {t.home.applications.description}
           </p>
         </div>
 
@@ -26,6 +26,9 @@ const Applications = () => {
         <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {sectors.map((sector, index) => {
             const Icon = sector.icon;
+            const localizedSector = t.sectors[index];
+            const title = localizedSector?.title || sector.title;
+            const description = localizedSector?.description || sector.description;
 
             return (
               <div
@@ -37,20 +40,19 @@ const Applications = () => {
                 </div>
 
                 <h3 className="mb-2 text-lg font-semibold text-header">
-                  {sector.title}
+                  {title}
                 </h3>
 
                 <p className="text-sm leading-relaxed text-text">
-                  {sector.description}
+                  {description}
                 </p>
               </div>
             );
           })}
         </div>
-
       </div>
     </section>
   );
 };
 
-export default Applications;
+export default ApplicationsSection;

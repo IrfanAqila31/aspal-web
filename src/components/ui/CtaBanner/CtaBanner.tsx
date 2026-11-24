@@ -1,27 +1,31 @@
 import { Link } from "react-router-dom";
 import { ArrowRight, ShieldCheck, Handshake, Zap } from "lucide-react";
 import bgCta from "../../../assets/images/about/about-hero.webp";
-
-const features = [
-  {
-    icon: ShieldCheck,
-    title: "Produk Berkualitas",
-  },
-  {
-    icon: Handshake,
-    title: "Dukungan Teknis Profesional",
-  },
-  {
-    icon: Zap,
-    title: "Pengiriman Tepat Waktu",
-  },
-];
+import { useTranslation } from "../../../data/translation"; // 1. Import hook
 
 const CtaBanner = () => {
+  const { t } = useTranslation(); // 2. Panggil hook
+
+  // 3. Array fitur sekarang dinamis mengikuti bahasa
+  const features = [
+    {
+      icon: ShieldCheck,
+      title: t.ctaBanner.featureQuality,
+    },
+    {
+      icon: Handshake,
+      title: t.ctaBanner.featureSupport,
+    },
+    {
+      icon: Zap,
+      title: t.ctaBanner.featureDelivery,
+    },
+  ];
+
   return (
     <aside
       aria-labelledby="cta-heading"
-      className="relative overflow-hidden bg-slate-800/5 py-16 md:py-20 text-white border-b border-slate-800/90"
+      className="relative overflow-hidden bg-slate-900/10 py-16 md:py-20 text-white border-b border-slate-800"
     >
       <img
         src={bgCta}
@@ -36,11 +40,11 @@ const CtaBanner = () => {
 
       <div className="mx-auto max-w-7xl px-4">
         <div className="grid grid-cols-1 items-center gap-12 lg:grid-cols-12 lg:gap-8">
+          {/* Kolom Kiri */}
           <div className="lg:col-span-7">
             <div className="mb-4 flex items-center gap-2">
-              
               <span className="text-xs font-bold uppercase tracking-widest text-yellow-400 md:text-sm">
-                Konsultasi Produk
+                {t.ctaBanner.eyebrow}
               </span>
             </div>
 
@@ -48,23 +52,23 @@ const CtaBanner = () => {
               id="cta-heading"
               className="mb-4 text-2xl font-bold leading-tight text-white md:text-4xl"
             >
-              Butuh informasi lebih lanjut mengenai produk kami?
+              {t.ctaBanner.title}
             </h2>
 
             <p className="mb-8 max-w-xl text-sm leading-relaxed text-slate-200 md:text-base">
-              Tim kami siap membantu Anda dengan informasi produk, spesifikasi
-              teknis, dan solusi terbaik untuk kebutuhan proyek Anda.
+              {t.ctaBanner.description}
             </p>
 
             <Link
               to="/contact"
               className="inline-flex items-center gap-3 rounded-full bg-yellow-400 px-7 py-3.5 text-sm font-bold text-slate-900 transition-all duration-300 hover:bg-yellow-300 hover:shadow-lg active:scale-95"
             >
-              <span>Hubungi Kami</span>
+              <span>{t.buttons.contactUs}</span>
               <ArrowRight size={18} aria-hidden="true" />
             </Link>
           </div>
 
+          {/* Kolom Kanan (3 Fitur) */}
           <div className="lg:col-span-5">
             <ul className="flex flex-col sm:flex-row items-center justify-around gap-6 sm:gap-2 border-t border-white/10 pt-8 sm:border-t-0 sm:pt-0 list-none p-0">
               {features.map((feature, index) => {

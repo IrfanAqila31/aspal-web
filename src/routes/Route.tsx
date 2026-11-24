@@ -1,4 +1,4 @@
-import type { RouteObject } from "react-router-dom";
+import { Navigate, type RouteObject } from "react-router-dom";
 import MainLayouts from "../layouts/MainLayouts";
 import Home from "../components/pages/Home";
 import AboutUs from "../components/pages/AboutUs";
@@ -20,6 +20,11 @@ const routes: RouteObject[] = [
         element: <AboutUs />,
       },
       {
+        // Redirect dari path lama /about ke /about-us
+        path: "/about",
+        element: <Navigate to="/about-us" replace />,
+      },
+      {
         path: "/products",
         element: <Products />,
       },
@@ -34,6 +39,11 @@ const routes: RouteObject[] = [
       {
         path: "/contact",
         element: <Contact />,
+      },
+      {
+        // Fallback untuk route yang tidak ditemukan
+        path: "*",
+        element: <Navigate to="/" replace />,
       },
     ],
   },

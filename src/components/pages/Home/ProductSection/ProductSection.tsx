@@ -1,23 +1,24 @@
 import { products } from "../../../../data/dataProducts";
 import ProductCard from "../../../ui/ProductCard";
+import { useTranslation } from "../../../../data/translation";
 
 const ProductSection = () => {
+  const { t } = useTranslation();
+
   return (
     <section className="bg-white py-20">
       <div className="mx-auto max-w-7xl px-4">
         <div className="mx-auto mb-25 max-w-3xl text-center">
           <span className="mb-4 block text-sm font-bold uppercase tracking-wider text-text">
-            Produk Kami
+            {t.home.products.eyebrow}
           </span>
 
           <h2 className="mb-6 text-3xl font-bold text-header md:text-5xl">
-            Solusi Aditif Aspal Berkualitas
+            {t.home.products.title}
           </h2>
 
           <p className="text-lg leading-relaxed text-text">
-            Temukan berbagai produk aditif aspal dan material pemeliharaan jalan
-            berkualitas tinggi yang dirancang untuk meningkatkan performa,
-            ketahanan, dan kualitas infrastruktur jalan.
+            {t.home.products.description}
           </p>
         </div>
 

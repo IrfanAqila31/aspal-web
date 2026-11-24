@@ -1,7 +1,10 @@
 import { NavLink } from "react-router-dom";
 import HeroImage from "../../../../assets/images/home/bg-hero.webp";
+import { useTranslation } from "../../../../data/translation";
 
-const Home = () => {
+const HeroSection = () => {
+  const { t } = useTranslation();
+
   return (
     <section className="pt-15 relative w-full h-180 md:h-170 lg:h-screen flex items-center bg-cover bg-center bg-no-repeat">
       <img
@@ -20,13 +23,11 @@ const Home = () => {
             id="hero-heading"
             className="text-3xl md:text-5xl font-extrabold text-slate-50 leading-tight tracking-wide mb-4"
           >
-            Solusi Aditif Aspal Berkualitas untuk Infrastruktur yang{" "} <br />
-            <span className="text-yellow-400">Lebih Baik</span>
+            {t.home.hero.titlePart1} <br />
+            <span className="text-yellow-400">{t.home.hero.titleHighlight}</span>
           </h1>
           <p className="text-sm md:text-lg text-slate-100 mb-7 leading-relaxed tracking-wide max-w-xl">
-            Hubei Luxiang menyediakan berbagai bahan aditif aspal dan material
-            pemeliharaan jalan berkualitas untuk mendukung pembangunan
-            infrastruktur yang lebih kuat, tahan lama, dan berkelanjutan.
+            {t.home.hero.description}
           </p>
 
           <nav
@@ -34,21 +35,21 @@ const Home = () => {
             className="flex flex-wrap items-center gap-4"
           >
             <NavLink
-              to="contact"
+              to="/contact"
               className="group flex gap-3 items-center justify-center px-8 py-3 bg-slate-100 hover:bg-slate-600 text-slate-900 font-medium hover:text-slate-50 cursor-pointer rounded-full transition duration-300"
             >
-              Hubungi Kami
+              {t.home.hero.cta}
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
                 viewBox="0 0 24 24"
-                stroke-width="1.5"
+                strokeWidth="1.5"
                 stroke="currentColor"
                 className="size-6 h-5 w-5 group-hover:translate-x-1 transition duration-300"
               >
                 <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
                   d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3"
                 />
               </svg>
@@ -59,4 +60,5 @@ const Home = () => {
     </section>
   );
 };
-export default Home;
+
+export default HeroSection;

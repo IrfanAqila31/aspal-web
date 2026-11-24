@@ -1,31 +1,32 @@
 import { products } from "../../../../data/dataProducts";
 import ProductCard from "../../../ui/ProductCard";
+import { useTranslation } from "../../../../data/translation";
 
 const ProductCatalogSection = () => {
+  const { t } = useTranslation();
+
   return (
     <section
       id="products-catalog"
       aria-labelledby="catalog-heading"
-      className="bg-white py-20 md:py-28"
+      className="bg-white py-20 md:py-28 scroll-mt-20"
     >
       <div className="mx-auto max-w-7xl px-4">
         {/* Section Header */}
         <header className="mx-auto mb-16 max-w-3xl text-center">
           <span className="mb-3 block text-sm font-bold uppercase tracking-wider text-text">
-            Katalog Lengkap
+            {t.products.catalog.eyebrow}
           </span>
 
           <h2
             id="catalog-heading"
             className="mb-6 text-3xl font-bold text-header md:text-5xl"
           >
-            Daftar Produk Aditif Aspal
+            {t.products.catalog.title}
           </h2>
 
           <p className="text-base leading-relaxed text-text md:text-lg">
-            Temukan 12 formulasi aditif aspal dan material pemeliharaan jalan
-            berkualitas tinggi sesuai standar spesifikasi PUPR untuk kebutuhan
-            proyek Anda.
+            {t.products.catalog.description}
           </p>
         </header>
 
@@ -34,7 +35,6 @@ const ProductCatalogSection = () => {
           {products.map((product) => (
             <li key={product.id} className="h-full">
               <ProductCard
-                key={product.id}
                 id={product.id}
                 name={product.name}
                 image={product.image}

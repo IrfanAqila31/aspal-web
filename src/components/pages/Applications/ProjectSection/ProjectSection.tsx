@@ -1,6 +1,9 @@
 import { featuredProjects } from "../../../../data/dataApplications";
+import { useTranslation } from "../../../../data/translation";
 
 const ProjectsSection = () => {
+  const { t } = useTranslation();
+
   return (
     <section
       id="proyek-kami"
@@ -11,9 +14,8 @@ const ProjectsSection = () => {
         {/* Header Section */}
         <header className="mx-auto mb-16 max-w-3xl text-center">
           <div className="mb-3 inline-flex items-center gap-2">
-          
             <span className="text-xs font-bold uppercase tracking-widest text-text md:text-sm">
-              Proyek Jalan & Jembatan
+              {t.applications.projects.eyebrow}
             </span>
           </div>
 
@@ -21,8 +23,7 @@ const ProjectsSection = () => {
             id="projects-heading"
             className="text-2xl font-bold leading-tight text-header md:text-3xl lg:text-4xl"
           >
-            Hubei Luxiang telah berpartisipasi dalam ratusan proyek jalan dan
-            jembatan di Tiongkok.
+            {t.applications.projects.title}
           </h2>
         </header>
 

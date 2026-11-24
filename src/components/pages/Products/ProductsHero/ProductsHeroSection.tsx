@@ -1,6 +1,17 @@
 import AboutHero from "../../../../assets/images/products/hero-product.webp";
+import { useTranslation } from "../../../../data/translation";
 
-const ProductsHeroSectionst = () => {
+const ProductsHeroSection = () => {
+  const { t } = useTranslation();
+
+  const handleScrollToCatalog = (e: React.MouseEvent<HTMLAnchorElement>) => {
+    e.preventDefault();
+    const catalogElement = document.getElementById("products-catalog");
+    if (catalogElement) {
+      catalogElement.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
   return (
     <section className="pt-15 relative w-full h-180 md:h-170 lg:h-screen flex items-center bg-cover bg-center bg-no-repeat">
       <img
@@ -16,18 +27,16 @@ const ProductsHeroSectionst = () => {
       <div className="relative z-10 w-full max-w-7xl mx-auto px-4">
         <header className="max-w-3xl drop-shadow-lg">
           <span className="text-yellow-300 uppercase font-semibold text-base md:text-lg tracking-wider">
-            Produk Kami
+            {t.products.hero.eyebrow}
           </span>
           <h1
             id="hero-heading"
             className="text-3xl md:text-5xl font-extrabold text-slate-50 leading-tight tracking-wide mb-4 mt-3"
           >
-            Produk Aditif Aspal dan Material Infrastruktur
+            {t.products.hero.title}
           </h1>
           <p className="text-sm md:text-lg text-slate-100 mb-7 leading-relaxed tracking-wide max-w-xl">
-            Hubei Luxiang menyediakan berbagai produk aditif aspal berkualitas
-            tinggi yang dirancang untuk meningkatkan performa dan daya tahan
-            infrastruktur jalan
+            {t.products.hero.description}
           </p>
 
           <nav
@@ -36,20 +45,21 @@ const ProductsHeroSectionst = () => {
           >
             <a
               href="#products-catalog"
+              onClick={handleScrollToCatalog}
               className="group flex gap-3 items-center justify-center px-8 py-3 bg-slate-100 hover:bg-slate-600 text-slate-900 font-medium hover:text-slate-50 cursor-pointer rounded-full transition duration-300"
             >
-              Jelajahi Produk
+              {t.products.hero.cta}
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
                 viewBox="0 0 24 24"
-                stroke-width={1.5}
+                strokeWidth={1.5}
                 stroke="currentColor"
                 className="size-6 h-5 w-5 group-hover:translate-x-1 transition duration-300"
               >
                 <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
                   d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3"
                 />
               </svg>
@@ -60,4 +70,5 @@ const ProductsHeroSectionst = () => {
     </section>
   );
 };
-export default ProductsHeroSectionst;
+
+export default ProductsHeroSection;
