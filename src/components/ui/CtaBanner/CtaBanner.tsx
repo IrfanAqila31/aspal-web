@@ -38,7 +38,7 @@ const CtaBanner = () => {
         <div className="grid grid-cols-1 items-center gap-12 lg:grid-cols-12 lg:gap-8">
           <div className="lg:col-span-7">
             <div className="mb-4 flex items-center gap-2">
-              <span className="h-0.5 w-6 bg-yellow-400" aria-hidden="true" />
+              
               <span className="text-xs font-bold uppercase tracking-widest text-yellow-400 md:text-sm">
                 Konsultasi Produk
               </span>

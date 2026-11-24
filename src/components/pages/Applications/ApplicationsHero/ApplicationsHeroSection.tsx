@@ -1,10 +1,10 @@
-import AboutHero from "../../../../assets/images/products/hero-product.webp";
+import ApplicationHero from "../../../../assets/images/about/about-hero.webp";
 
 const ApplicationsHeroSection = () => {
   return (
     <section className="pt-15 relative w-full h-180 md:h-170 lg:h-screen flex items-center bg-cover bg-center bg-no-repeat">
       <img
-        src={AboutHero}
+        src={ApplicationHero}
         alt="Fasilitas industri manufaktur bahan aditif aspal"
         className="absolute inset-0 w-full h-full object-cover object-[70%_center] md:object-[75%_center] -z-10"
       />

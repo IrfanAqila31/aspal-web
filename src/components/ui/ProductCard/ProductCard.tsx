@@ -1,7 +1,8 @@
 import type { Product } from "../../../data/dataProducts";
-type ProductCardProps = Pick<Product, "name" | "image" | "description">;
+import { Link } from "react-router-dom";
+type ProductCardProps = Pick<Product, "id" | "name" | "image" | "description">;
 
-const ProductCard = ({ name, image, description }: ProductCardProps) => {
+const ProductCard = ({ id, name, image, description }: ProductCardProps) => {
   return (
     <article className="relative flex h-full flex-col rounded-xl bg-white text-text shadow-md">
       {/* Gambar dengan tinggi konsisten */}
@@ -24,12 +25,12 @@ const ProductCard = ({ name, image, description }: ProductCardProps) => {
 
       {/* mt-auto membuat tombol selalu nempel di bagian paling bawah kartu */}
       <div className="p-6 pt-0 mt-auto">
-        <button
-          type="button"
+        <Link
+          to={`/products/${id}`}
           className="rounded-lg bg-button px-6 py-3 text-xs font-bold text-white transition hover:bg-hover-button duration-300 w-full md:w-auto cursor-pointer"
         >
           Lihat Detail
-        </button>
+        </Link>
       </div>
     </article>
   );

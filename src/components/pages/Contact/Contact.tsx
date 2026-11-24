@@ -1,8 +1,12 @@
+import ContactSectionHero from "./ContactHero";
+import ContactInfoSection from "./ContactInfo";
+
 const Contact = () => {
-    return (
-        <div>
-            <h1>Contact</h1>
-        </div>
-    )
-}
-export default Contact
+  return (
+    <section>
+      <ContactSectionHero />
+      <ContactInfoSection />
+    </section>
+  );
+};
+export default Contact;

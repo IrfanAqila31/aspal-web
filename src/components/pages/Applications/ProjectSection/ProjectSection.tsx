@@ -11,7 +11,7 @@ const ProjectsSection = () => {
         {/* Header Section */}
         <header className="mx-auto mb-16 max-w-3xl text-center">
           <div className="mb-3 inline-flex items-center gap-2">
-            <span className="h-0.5 w-6 bg-yellow-400" aria-hidden="true" />
+          
             <span className="text-xs font-bold uppercase tracking-widest text-text md:text-sm">
               Proyek Jalan & Jembatan
             </span>
