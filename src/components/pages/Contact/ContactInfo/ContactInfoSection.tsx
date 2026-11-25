@@ -98,7 +98,7 @@ const ContactInfoSection = () => {
                   href="mailto:budi732001@gmail.com"
                   className="inline-block text-lg font-bold text-header hover:text-blue-600 transition-colors md:text-xl"
                 >
-                  budi732001@gmail.com
+                  budi732000@gmail.com
                 </a>
               </div>
             </article>
